@@ -2,6 +2,7 @@
 title:
 header-includes:
  - \usepackage{bbm}
+ - \usepackage{sectsty}
  - \usepackage{times}
  - \usepackage{setspace}
  - \usepackage{inputenc}
@@ -10,7 +11,7 @@ header-includes:
  - \usepackage{indentfirst}
  - \usepackage[brazil]{babel}
  - \usepackage{graphicx,psfrag}
- - \usepackage[T1]{fontenc}
+ - \usepackage{fontenc}
  - \usepackage{times, amsmath, amsfonts, amssymb, amsthm}
  - \usepackage{xcolor}
  - \usepackage{url}
@@ -18,7 +19,6 @@ header-includes:
  - \captionsetup{labelsep=endash, format=hang, width=\textwidth} 
  - \usepackage{placeins}
  - \usepackage[labelfont=bf]{caption}
- - \usepackage{sectsty}
  - \sectionfont{\fontsize{12}{15}\selectfont}
  - \subsectionfont{\fontsize{12}{15}\selectfont}
  - \usepackage{enumitem}
@@ -42,6 +42,7 @@ header-includes:
 output: pdf_document
 keep_tex: true
 fontsize: 12pt
+fontenc: T1
 geometry: "left = 2.5cm, right = 2cm, top = 2cm, bottom = 2cm"
 setspace: nodisplayskipstretch
 inputenc: utf8
@@ -56,37 +57,38 @@ csl: associacao-brasileira-de-normas-tecnicas.csl
 \newcommand{\departamento}{Departamento de Zoologia}
 \newcommand{\ppg}{Programa de Pós-Graduação em Biologia Animal}
 \newcommand{\curso}{Ciências Biológicas com ênfase em Ciências Ambientais}
-\newcommand{\titulo}{Curvas de acumulação de diversidade efetiva em comunidades de macrobentos da praia de tamandaré}
+\newcommand{\titulo}{Título do Trabalho e subtítulo (se tiver)}
 \newcommand{\nome}{Nome do Aluno}
 \newcommand{\orientador}{Prof. Dr. Nome do Orientador }
 \newcommand{\cidadeano}{Recife\\2022}
+\newcommand{\titulacao}{Bacharel em Biologia}
 ```
 ```{=tex}
 \thispagestyle{empty}
 \setstretch{1.0}
 \begin{center}
-{\MakeUppercase{\textbf{Universidade Federal de Pernambuco}}\\
-  \MakeUppercase{\textbf{Centro de Biociências}}\\
-  \MakeUppercase{\textbf{Ciências Biológicas com ênfase em Ciências Ambientais}}\\}
+{\MakeUppercase{\textbf{\universidade}}\\
+  \MakeUppercase{\textbf{\centro}}\\
+  \MakeUppercase{\textbf{\curso}}\\}
 \end{center}
 \vspace{3cm}
 ```
 ```{=tex}
 \begin{center}
-{\MakeUppercase{\textbf{Nome do Aluno}}}
+{\MakeUppercase{\textbf{\nome}}}
 \end{center}
 \vspace{5cm}
 ```
 ```{=tex}
 \begin{center}
-\MakeUppercase{\textbf{Curvas de acumulação de diversidade efetiva em comunidades de macrobentos da praia de tamandaré}}
+\MakeUppercase{\textbf{\titulo}}
 \end{center}
 \vspace{5cm}
 ```
 ```{=tex}
 \vspace{6cm}
 \begin{center}
-\MakeUppercase{\textbf{Recife\\2022}}
+\MakeUppercase{\textbf{\cidadeano}}
 \end{center}
 ```
 ```{=tex}
@@ -96,11 +98,11 @@ csl: associacao-brasileira-de-normas-tecnicas.csl
 ```
 ```{=tex}
 \begin{center}
-{\MakeUppercase{\textbf{Nome do Aluno}}}
+{\MakeUppercase{\textbf{\nome}}}
 
 \vspace{6cm}
 
-\MakeUppercase{\textbf{Curvas de acumulação de diversidade efetiva em comunidades de macrobentos da praia de tamandaré}}
+\MakeUppercase{\textbf{\titulo}}
 
 
 \vspace{3cm}
@@ -108,17 +110,17 @@ csl: associacao-brasileira-de-normas-tecnicas.csl
 ```
 ```{=tex}
 \hspace{8cm}{\begin{minipage}{8.5cm}{
-Trabalho de Conclusão de Curso apresentado a Coordenação do Curso de Graduação em Xxxxxx, da Universidade Federal de Pernambuco, como requisito parcial para obtenção do Título de Bacharel em Xxxxxxxx.\\
+Trabalho de Conclusão de Curso apresentado a Coordenação do Curso de Graduação em \curso, da \universidade, como requisito parcial para obtenção do Título de \titulacao.\\
 
-Orientador: \parbox[t]{6.0cm}{Prof. Dr. Nome do Orientador }}
+Orientador: \parbox[t]{6.0cm}{\orientador}}
 \end{minipage}}
 ```
 \vspace{6cm}
 
 ```{=tex}
-\vspace{2.5cm}
+\vspace{2cm}
 \begin{center}
-\MakeUppercase{\textbf{Recife\\2022}}
+\MakeUppercase{\textbf{\cidadeano}}
 \end{center}
 ```
 ```{=tex}
@@ -134,11 +136,11 @@ Orientador: \parbox[t]{6.0cm}{Prof. Dr. Nome do Orientador }}
 ```
 ```{=tex}
 \begin{center}
-{\MakeUppercase{\textbf{Nome do Aluno}}}
+{\MakeUppercase{\textbf{\nome}}}
 
 \vspace{3cm}
 
-\MakeUppercase{\textbf{Curvas de acumulação de diversidade efetiva em comunidades de macrobentos da praia de tamandaré}}
+\MakeUppercase{\textbf{\titulo}}
 
 \normalsize
 
@@ -147,8 +149,8 @@ Orientador: \parbox[t]{6.0cm}{Prof. Dr. Nome do Orientador }}
 ```
 ```{=tex}
 \hspace{8cm}{\begin{minipage}{8.5cm}{
-Dissertação apresentada ao Programa de Pós-Graduação em Xxxxxxxx, Área de Concentração XXX, da Universidade Federal de Pernambuco, como requisito parcial para obtenção do título de Mestre em Xxxxxxxx.\\
-Orientador: Prof. Dr. Nome do Orientador \\
+Dissertação apresentada ao \ppg, Área de Concentração XXX, da \universidade, como requisito parcial para obtenção do título de \titulacao.\\
+Orientador: \orientador \\
 
 Data de Aprovação: XX/XX/XX\\
 Nota: X }
@@ -165,17 +167,17 @@ Nota: X }
 
 \vspace{1cm}
 
-{\underline{\hspace{10cm}} \\}
-{\bf Orientador Prof. Dr. Nome do Orientador \\}
+{\makebox[10cm][c] {\hrulefill}\\}
+{\bf Orientador \orientador \\}
 {\bf Universidade Federal de Pernambuco}
 \vspace{1cm}
 
-{\underline{\hspace{10cm}} \\}
+{\makebox[10cm][c] {\hrulefill}\\}
 {\bf Prof. Dr. Componente da Banca\\}
 {\bf Universidade Federal de Pernambuco}
 \vspace{1cm}
 
-{\underline{\hspace{10cm}} \\}
+{\makebox[10cm][c] {\hrulefill}\\}
 {\bf Prof. Dr. Componente da Banca\\}
 {\bf Universidade Federal de Pernambuco}
 \vspace{2cm}
